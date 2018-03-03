@@ -3,7 +3,7 @@ clear all
 %% Set up parameters
 N = 40; % Number of training samples
 epsilon = 0.0; % Amount of label noise
-Nh = 5;
+Nh = 26;
 lambda = 0;
 
 %% Make dataset
@@ -44,9 +44,7 @@ hold on
 plot(x_test,y_pred)
 
 text(-pi,[.1 .9]*get(gca,'YLim')',sprintf('MSE: %g ', mean_squared_error))
+text(-pi,[.1 .8]*get(gca,'YLim')',sprintf('Nh = %g', Nh))
 xlabel('Input')
 ylabel('Output')
 legend('Training data','Test data','Prediction')
-
-
-
